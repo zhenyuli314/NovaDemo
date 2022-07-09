@@ -1,0 +1,14 @@
+group 'com.nova'
+version '0.0.1-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.jooq:jooq-codegen:3.14.7'
+    implementation 'org.jooq:jooq:3.14.7'
+    implementation 'org.jooq:jooq-meta:3.14.7'
+}
