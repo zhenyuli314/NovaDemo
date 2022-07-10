@@ -53,7 +53,7 @@ tasks.register("JOOQ_Code_Generate") {
         val config: Configuration = Configuration()
             .withJdbc(Jdbc()
                 .withDriver("com.mysql.cj.jdbc.Driver")
-                .withUrl("jdbc:mysql://127.0.0.1:3306/nova-demo?characterEncoding=UTF-8&serverTimezone=GMT")
+                .withUrl("jdbc:mysql://192.168.161.131:3306/nova-demo?characterEncoding=UTF-8&serverTimezone=GMT")
                 .withUsername("root")
                 .withPassword("li15034395319"))
             .withGenerator(Generator()

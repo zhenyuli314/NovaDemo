@@ -1,6 +1,7 @@
 package com.nova.novademo.service
 
 import com.nova.novademo.codegen.NovaDemo
+import com.nova.novademo.exception.DuplicateKeyException
 import com.nova.novademo.utli.DateTimeUtil
 import com.nova.novademo.vo.PageResult
 import org.jooq.DSLContext
@@ -9,14 +10,14 @@ import javax.annotation.Resource
 
 /**
  * 抽象通用Service
- * @param <P>
- * @param <T>
+ * @param <P>  XXXpojo
+ * @param <T> 主键类型
  */
 const val CREATE_TIME = "createTime"
 const val UPDATE_TIME = "updateTime"
 const val DELETED = "deleted"
 
-abstract class BaseServiceImp<P, T,>(_dao: DAOImpl<*, P, T>) : BaseService<P, T> {
+abstract class BaseServiceImp<P, T>(_dao: DAOImpl<*, P, T>) : BaseService<P, T> {
     @Resource
     lateinit var dsl: DSLContext
 
@@ -36,7 +37,11 @@ abstract class BaseServiceImp<P, T,>(_dao: DAOImpl<*, P, T>) : BaseService<P, T>
 
     override fun save(entity: P) {
         fillCreateOrUpdateTime(entity, CREATE_TIME)
-        dao.insert(entity)
+        try {
+            dao.insert(entity)
+        } catch (exception: Exception) {
+            throw DuplicateKeyException("主键或id重复，请检查新增数据！")
+        }
     }
 
     fun fillCreateOrUpdateTime(entity: P, name: String) {
@@ -59,7 +64,11 @@ abstract class BaseServiceImp<P, T,>(_dao: DAOImpl<*, P, T>) : BaseService<P, T>
         entities.forEach {
             fillCreateOrUpdateTime(it, CREATE_TIME)
         }
-        dao.insert(entities)
+        try {
+            dao.insert(entities)
+        } catch (exception: Exception) {
+            throw DuplicateKeyException("部分数据的主键或id重复，请检查新增数据！")
+        }
     }
 
     override fun update(entity: P) {

@@ -10,7 +10,9 @@ import lombok.experimental.Accessors
 @NoArgsConstructor
 @AllArgsConstructor
 @Accessors(chain = true)
-open class BaseResponse(_resultCode: ResultCode){
-    var code:Int = _resultCode.code
-    var msg:String = _resultCode.msg
+open class BaseResponse(
+    var code: Int,
+    var msg: String? = null
+) {
+    constructor(resultCode: ResultCode) : this(resultCode.code, resultCode.msg)
 }

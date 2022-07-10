@@ -8,6 +8,12 @@ import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import javax.annotation.Resource
 
+/**
+ * Nova user service
+ *
+ * @property mapper
+ * @constructor Create empty Nova user service
+ */
 @Service
 @Transactional(rollbackFor = [Exception::class])
 class NovaUserService(@Resource var mapper: NovaUserDao) : BaseServiceImp<NovaUserPojo, String>(mapper) {
@@ -54,6 +60,12 @@ class NovaUserService(@Resource var mapper: NovaUserDao) : BaseServiceImp<NovaUs
     }
 
 
+    /**
+     * Check deleted
+     * 逻辑删除检测，1为删除，0为未删除
+     * @param entity
+     * @return
+     */
     fun checkDeleted(entity: NovaUserPojo?): NovaUserPojo? {
         return if (entity == null || entity.deleted == "1") null else entity
     }

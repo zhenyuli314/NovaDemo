@@ -66,13 +66,13 @@ abstract class BaseController<S : BaseService<P, String>, P> {
     @PostMapping("/save")
     fun save(@RequestBody entity: P): BaseResponse {
         service.save(this.preSave(entity))
-        return ObjectResultResponse(ResultCode.OK)
+        return ObjectResultResponse(ResultCode.OK.code)
     }
 
     @PostMapping("/update")
     fun update(@RequestBody entity: P): BaseResponse {
         service.update(this.preUpdate(entity))
-        return ObjectResultResponse(ResultCode.OK)
+        return ObjectResultResponse(ResultCode.OK.code)
     }
 
 
