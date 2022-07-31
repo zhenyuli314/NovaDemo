@@ -41,10 +41,15 @@ abstract class BaseController<S : BaseService<P, String>, P> {
         return params
     }
 
+    open fun preDelete(id: String): String {
+        checkNotNull(id)
+        return id
+    }
+
     @GetMapping("/getById")
     fun getById(id: String): BaseResponse {
         val entity = service.get(id)
-        return ObjectResultResponse(entity);
+        return ObjectResultResponse(entity)
     }
 
     @GetMapping("/getAll")
@@ -59,7 +64,7 @@ abstract class BaseController<S : BaseService<P, String>, P> {
         val currentPage = params["currentPage"]?.let { it.toString().toInt() } ?: 1
         val pageSize = params["pageSize"]?.let { it.toString().toInt() } ?: 10
         val pageResult = service.page(PageResult(null, pageSize, currentPage, null))
-        return ObjectResultResponse(pageResult);
+        return ObjectResultResponse(pageResult)
     }
 
 
@@ -75,5 +80,9 @@ abstract class BaseController<S : BaseService<P, String>, P> {
         return ObjectResultResponse(ResultCode.OK.code)
     }
 
-
+    @GetMapping("/delete")
+    fun delete(id: String): BaseResponse {
+        service.delete(id)
+        return ObjectResultResponse(ResultCode.OK.code)
+    }
 }

@@ -1,0 +1,208 @@
+{
+	"info": {
+		"name": "novademo",
+		"_postman_id": "9ab6fdd9-f129-8d83-a8e0-eb9fd917ea6e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://192.168.161.131:8080/nova/user/getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://192.168.161.131:8080/nova/user/getAll",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"161",
+						"131"
+					],
+					"port": "8080",
+					"path": [
+						"nova",
+						"user",
+						"getAll"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.161.131:8080/nova/user/getById?id=5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://192.168.161.131:8080/nova/user/getById?id=5",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"161",
+						"131"
+					],
+					"port": "8080",
+					"path": [
+						"nova",
+						"user",
+						"getById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.161.131:8080/nova/user/page?currentPage=1&pageSize=2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://192.168.161.131:8080/nova/user/page?currentPage=1&pageSize=2",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"161",
+						"131"
+					],
+					"port": "8080",
+					"path": [
+						"nova",
+						"user",
+						"page"
+					],
+					"query": [
+						{
+							"key": "currentPage",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "2",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.161.131:8080/nova/user/save",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"9\",\n\t\"username\": \"成龙\",\n\t\"email\": \"chenglong@163.com\",\n\t\"address\": \"香港\"\n}"
+				},
+				"url": {
+					"raw": "http://192.168.161.131:8080/nova/user/save",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"161",
+						"131"
+					],
+					"port": "8080",
+					"path": [
+						"nova",
+						"user",
+						"save"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.161.131:8080/nova/user/update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": \"12\",\n        \"username\": \"成龙\",\n        \"email\": \"chenglong@163.com\",\n        \"address\": \"澳门\",\n        \"createTime\": \"2022-07-07T18:39:57\",\n        \"deleted\": \"0\"\n    }"
+				},
+				"url": {
+					"raw": "http://192.168.161.131:8080/nova/user/update",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"161",
+						"131"
+					],
+					"port": "8080",
+					"path": [
+						"nova",
+						"user",
+						"update"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://192.168.161.131:8080/nova/user/delete?id=5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://192.168.161.131:8080/nova/user/delete?id=5",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"161",
+						"131"
+					],
+					"port": "8080",
+					"path": [
+						"nova",
+						"user",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

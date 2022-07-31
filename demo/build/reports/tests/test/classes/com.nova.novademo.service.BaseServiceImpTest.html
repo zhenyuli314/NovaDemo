@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">3.097s</div>
+<div class="counter">1.077s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,52 +82,52 @@
 </thead>
 <tr>
 <td class="success">delete()</td>
-<td class="success">2.841s</td>
+<td class="success">0.981s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">get()</td>
-<td class="success">0.016s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">listAll()</td>
-<td class="success">0.033s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">listByIds()</td>
-<td class="success">0.050s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">page()</td>
-<td class="success">0.070s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">save()</td>
-<td class="success">0.008s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testDelete()</td>
-<td class="success">0.041s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSave()</td>
 <td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">listAll()</td>
+<td class="success">0.013s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">listByIds()</td>
+<td class="success">0.020s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">page()</td>
+<td class="success">0.024s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">save()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testDelete()</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSave()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testUpdate()</td>
-<td class="success">0.006s</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">update()</td>
-<td class="success">0.025s</td>
+<td class="success">0.011s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -135,21 +135,21 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>21:03:28.660 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-21:03:28.686 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-21:03:28.769 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.nova.novademo.service.BaseServiceImpTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-21:03:28.795 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.nova.novademo.service.BaseServiceImpTest], using SpringBootContextLoader
-21:03:28.802 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.nova.novademo.service.BaseServiceImpTest]: class path resource [com/nova/novademo/service/BaseServiceImpTest-context.xml] does not exist
-21:03:28.802 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.nova.novademo.service.BaseServiceImpTest]: class path resource [com/nova/novademo/service/BaseServiceImpTestContext.groovy] does not exist
-21:03:28.803 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.nova.novademo.service.BaseServiceImpTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-21:03:28.804 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nova.novademo.service.BaseServiceImpTest]: BaseServiceImpTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-21:03:28.974 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.nova.novademo.service.BaseServiceImpTest]
-21:03:29.144 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\java\NovaDemo\demo\build\classes\kotlin\main\com\nova\novademo\NovaDemoApplication.class]
-21:03:29.147 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nova.novademo.NovaDemoApplication for test class com.nova.novademo.service.BaseServiceImpTest
-21:03:29.362 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.nova.novademo.service.BaseServiceImpTest]: using defaults.
-21:03:29.363 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-21:03:29.403 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@30d7de2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5810912c, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@188e93b2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@66c203a6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@e4890f1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@520de9e5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3ef2f315, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@48db085e, org.springframework.test.context.event.EventPublishingTestExecutionListener@2ded6ac, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3fa145d3, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@16e26369, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6eb1013, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@72f4cdd4, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@47ce9184, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@42b25b3f]
-21:03:29.408 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@68a3853d testClass = BaseServiceImpTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@624633f4 testClass = BaseServiceImpTest, locations = '{}', classes = '{class com.nova.novademo.NovaDemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@122e7eb7, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6e0bee44, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3b1f0c83, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@59895138, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@33506737, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@1b3da8c4], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+<pre>20:55:03.784 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+20:55:03.797 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+20:55:03.831 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.nova.novademo.service.BaseServiceImpTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+20:55:03.846 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.nova.novademo.service.BaseServiceImpTest], using SpringBootContextLoader
+20:55:03.850 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.nova.novademo.service.BaseServiceImpTest]: class path resource [com/nova/novademo/service/BaseServiceImpTest-context.xml] does not exist
+20:55:03.850 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.nova.novademo.service.BaseServiceImpTest]: class path resource [com/nova/novademo/service/BaseServiceImpTestContext.groovy] does not exist
+20:55:03.851 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.nova.novademo.service.BaseServiceImpTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+20:55:03.851 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.nova.novademo.service.BaseServiceImpTest]: BaseServiceImpTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:55:03.905 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.nova.novademo.service.BaseServiceImpTest]
+20:55:03.970 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\java\NovaDemo\demo\build\classes\kotlin\main\com\nova\novademo\NovaDemoApplication.class]
+20:55:03.971 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.nova.novademo.NovaDemoApplication for test class com.nova.novademo.service.BaseServiceImpTest
+20:55:04.103 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.nova.novademo.service.BaseServiceImpTest]: using defaults.
+20:55:04.103 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+20:55:04.118 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5828d6f1, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2c23c9f4, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@74e891eb, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@73c8fea6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6dc93170, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5f972954, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6f409c84, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5b496204, org.springframework.test.context.event.EventPublishingTestExecutionListener@7faf9aac, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1914d184, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@72dbda9e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6292df83, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@616b4387, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5ecc26df, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72ef08b2]
+20:55:04.122 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@41a5848d testClass = BaseServiceImpTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@67630b51 testClass = BaseServiceImpTest, locations = '{}', classes = '{class com.nova.novademo.NovaDemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@4157c178, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1143a1b6, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3401ab8e, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@795e0d49, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@237a2cfb, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@561403f0], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -159,13 +159,13 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.7.1)
 
-2022-07-09 21:03:30.170  INFO 16128 --- [    Test worker] c.n.novademo.service.BaseServiceImpTest  : Starting BaseServiceImpTest using Java 1.8.0_152 on DESKTOP-NHBO1EN with PID 16128 (started by lzy in E:\java\NovaDemo\demo)
-2022-07-09 21:03:30.175  INFO 16128 --- [    Test worker] c.n.novademo.service.BaseServiceImpTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2022-07-09 21:03:32.888  INFO 16128 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-09 21:03:32.902  WARN 16128 --- [    Test worker] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
-2022-07-09 21:03:34.554  INFO 16128 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-09 21:03:39.519  INFO 16128 --- [    Test worker] c.n.novademo.service.BaseServiceImpTest  : Started BaseServiceImpTest in 10.058 seconds (JVM running for 13.5)
-2022-07-09 21:03:41.808  INFO 16128 --- [    Test worker] org.jooq.Constants                       : 
+2022-07-31 20:55:04.531  INFO 14796 --- [    Test worker] c.n.novademo.service.BaseServiceImpTest  : Starting BaseServiceImpTest using Java 1.8.0_152 on DESKTOP-NHBO1EN with PID 14796 (started by lzy in E:\java\NovaDemo\demo)
+2022-07-31 20:55:04.532  INFO 14796 --- [    Test worker] c.n.novademo.service.BaseServiceImpTest  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2022-07-31 20:55:05.585  INFO 14796 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-31 20:55:05.589  WARN 14796 --- [    Test worker] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2022-07-31 20:55:06.301  INFO 14796 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-31 20:55:08.171  INFO 14796 --- [    Test worker] c.n.novademo.service.BaseServiceImpTest  : Started BaseServiceImpTest in 4.017 seconds (JVM running for 5.496)
+2022-07-31 20:55:08.992  INFO 14796 --- [    Test worker] org.jooq.Constants                       : 
                                       
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -185,10 +185,10 @@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.14.7
                                       
-[NovaUserPojo (1, 张三, zhansan@163.com, 北京, 2019-12-28T00:41:42, 2019-12-28T00:41:42, 0), NovaUserPojo (2, 李四, lisi@gmail.com, 上海, 2019-12-28T00:41:42, 2019-12-28T00:41:42, 0)]
-NovaUserPojo (1, 张三, zhansan@163.com, 北京, 2019-12-28T00:41:42, 2019-12-28T00:41:42, 0)
-PageResult(data=[NovaUserPojo (9, 成龙, chenglong@163.com, 澳门, 2022-07-07T18:39:57, 2022-07-07T18:44:19, 0)], pageSize=1, currentPage=1, total=6)
-[NovaUserPojo (1, 张三, zhansan@163.com, 北京, 2019-12-28T00:41:42, 2019-12-28T00:41:42, 0), NovaUserPojo (2, 李四, lisi@gmail.com, 上海, 2019-12-28T00:41:42, 2019-12-28T00:41:42, 0), NovaUserPojo (3, 王五, wangwu@gmail.com, 西安, 2019-12-28T00:41:44, 2019-12-28T00:41:45, 0), NovaUserPojo (4, 赵六, zhaoliu@163.com, 深圳, null, null, 0), NovaUserPojo (5, Allen, Allen@163.com, 珠海, null, 2022-07-09T21:03:42, 0), NovaUserPojo (9, 成龙, chenglong@163.com, 澳门, 2022-07-07T18:39:57, 2022-07-07T18:44:19, 0)]
+[NovaUserPojo (1, 张三, zhansan@163.com, 北京S, 2019-12-28T00:41:42, 2022-07-10T05:30:09, 0), NovaUserPojo (2, 李四, lisi@gmail.com, 上海, 2019-12-28T00:41:42, 2019-12-28T00:41:42, 0)]
+NovaUserPojo (1, 张三, zhansan@163.com, 北京S, 2019-12-28T00:41:42, 2022-07-10T05:30:09, 0)
+PageResult(data=[NovaUserPojo (9, 成龙, chenglong@163.com, 澳门, 2022-07-07T18:39:57, 2022-07-07T18:44:19, 0)], pageSize=1, currentPage=1, total=8)
+[NovaUserPojo (1, 张三, zhansan@163.com, 北京S, 2019-12-28T00:41:42, 2022-07-10T05:30:09, 0), NovaUserPojo (2, 李四, lisi@gmail.com, 上海, 2019-12-28T00:41:42, 2019-12-28T00:41:42, 0), NovaUserPojo (3, 王五, wangwu@gmail.com, 西安, 2019-12-28T00:41:44, 2019-12-28T00:41:45, 0), NovaUserPojo (4, 赵六, zhaoliu@163.com, 深圳, null, null, 0), NovaUserPojo (5, Allen, Allen@163.com, 珠海, null, 2022-07-31T20:55:09, 0), NovaUserPojo (6, AAA, AAA@163.com, contryA, 2022-07-06T21:18:19, 2022-08-01T02:57:54, 0), NovaUserPojo (7, BBB, BBB@163.com, contryB, 2022-07-06T21:18:19, 2022-08-01T02:57:55, 0), NovaUserPojo (9, 成龙, chenglong@163.com, 澳门, 2022-07-07T18:39:57, 2022-07-07T18:44:19, 0)]
 </pre>
 </span>
 </div>
@@ -207,7 +207,7 @@ PageResult(data=[NovaUserPojo (9, 成龙, chenglong@163.com, 澳门, 2022-07-07T
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.1</a> at 2022-7-9 21:03:43</p>
+<a href="http://www.gradle.org">Gradle 7.1</a> at 2022-7-31 20:55:09</p>
 </div>
 </div>
 </body>

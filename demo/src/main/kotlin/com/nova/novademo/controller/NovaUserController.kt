@@ -32,4 +32,8 @@ class NovaUserController : BaseController<NovaUserService, NovaUserPojo>() {
     override fun prePage(params: Map<String, Any>): Map<String, Any> {
         return super.prePage(params)
     }
+
+    override fun preDelete(id: String): String {
+        return super.preDelete(id)
+    }
 }
